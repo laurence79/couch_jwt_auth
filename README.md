@@ -25,7 +25,9 @@ site is just amazing and explains the concepts really well.
 
 3. Build the plugin files:
   ```
-  $ cd couch_jwt_auth $ ./build.sh $ make plugin
+  $ cd couch_jwt_auth 
+  $ ./build.sh 
+  $ make plugin
   ```
 
 4. Find where CouchDB is installed:
@@ -132,6 +134,19 @@ will output:
 
 ```
 $ {"ok":true,"userCtx":{"name":"1234567890","roles":[]},"info":{"authentication_db":"_users","authentication_handlers":[...,"jwt",...],"authenticated":"jwt"}}
+```
+
+## Docker
+
+To build a docker image that includes this plugin using couchdb:1.6.1 as it's base, run
+```
+$ ./docker-build.sh
+```
+This should work with other couchdb:1.* base images, but it hasn't been tested
+
+To run a container from the built image for testing
+```
+$ ./docker-run.sh
 ```
 
 ## Use cases

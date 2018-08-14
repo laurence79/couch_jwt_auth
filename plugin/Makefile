@@ -5,7 +5,7 @@ COUCHDB_VERSION=$(shell couch-config --couch-version | sed 's/\+.*//')
 VERSION=1.0.1
 PLUGIN_DIRS=ebin priv
 PLUGIN_VERSION_SLUG=$(NAME)-$(VERSION)-$(ERLANG_VERSION)-$(COUCHDB_VERSION)
-PLUGIN_DIST=$(PLUGIN_VERSION_SLUG)
+PLUGIN_DIST=dist
 
 all: compile
 
